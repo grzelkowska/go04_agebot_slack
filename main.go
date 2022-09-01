@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"strconv"
-	"time"
 
 	"github.com/joho/godotenv"
 	"github.com/shomali11/slacker"
