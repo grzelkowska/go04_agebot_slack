@@ -31,10 +31,7 @@ func main() {
 	SLACK_BOT_TOKEN := os.Getenv("SLACK_BOT_TOKEN")
 	SLACK_APP_TOKEN := os.Getenv("SLACK_APP_TOKEN")
 
-	os.Setenv("SLACK_BOT_TOKEN", SLACK_BOT_TOKEN)
-	os.Setenv("SLACK_APP_TOKEN", SLACK_APP_TOKEN)
-
-	bot := slacker.NewClient(os.Getenv("SLACK_BOT_TOKEN"), os.Getenv("SLACK_APP_TOKEN"))
+	bot := slacker.NewClient(SLACK_BOT_TOKEN, SLACK_APP_TOKEN)
 
 	go printCommandEvents(bot.CommandEvents())
 
